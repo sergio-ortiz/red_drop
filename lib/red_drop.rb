@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "red_drop/auth"
 auth = Auth.new
 token = auth.token
