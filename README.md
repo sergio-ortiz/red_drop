@@ -1,4 +1,6 @@
-# RedDrop
+# red_drop
+
+is the seed of a grander vision of server automation with ruby.
 
 ## Installation
 
@@ -22,15 +24,16 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ### Todos
 
--   Research making gem executable
--   Research TDD and minitest vs rspec
--   refactor status module to match delete module droplets var structure
--   maybe convert delete module droplets array to hash with array index as key to avoid accidental deletions
--   refactor delete while loop to match that of red_drop.rb
--   refactor auth to use Faraday which is used by DropletKit
--   refactor status to get ip address of runnning droplets
--   Research having delete get status before executing
--   use cloud_init to automate server config for SSH, ufw, docker
+-   Research: making gem executable
+-   Research: TDD and minitest vs rspec
+-   Refactor: status module to match delete module droplets var structure
+-   Research: converting delete module droplets array to hash with array index as key to avoid accidental deletions
+-   Refactor: delete while loop to match that of red_drop.rb
+-   Refactor: auth to use Faraday which is used by DropletKit
+-   Research: status module to get ip address of runnning droplets
+-   Research: having delete module get status before executing
+-   Research: using cloud_init to automate server config for SSH, ufw, docker
+-   Research: should I use duck typing
 
 ## Contributing
 
