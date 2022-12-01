@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    red_drop (0.1.0)
+    red_drop (0.2.0)
       droplet_kit (~> 3.18)
 
 GEM

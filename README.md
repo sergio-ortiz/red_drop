@@ -14,7 +14,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-require "red_drop"
+    $ red_drop
 
 ## Development
 
