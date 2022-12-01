@@ -1,9 +1,5 @@
 # RedDrop
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/red_drop`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
@@ -16,7 +12,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+require "red_drop"
 
 ## Development
 
@@ -24,9 +20,21 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+### Todos
+
+-   Research making gem executable
+-   Research TDD and minitest vs rspec
+-   refactor status module to match delete module droplets var structure
+-   maybe convert delete module droplets array to hash with array index as key to avoid accidental deletions
+-   refactor delete while loop to match that of red_drop.rb
+-   refactor auth to use Faraday which is used by DropletKit
+-   refactor status to get ip address of runnning droplets
+-   Research having delete get status before executing
+-   use cloud_init to automate server config for SSH, ufw, docker
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/red_drop.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sergio-ortiz/red_drop.
 
 ## License
 
