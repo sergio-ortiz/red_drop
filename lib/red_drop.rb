@@ -11,17 +11,10 @@ droplet_wizard = DropletWizard.new(client)
 
 command = nil
 
-while not command === "quit"
-  puts "\nWhat would you like to do?\n['status', 'create', 'delete', 'quit']\n\n"
+while not command === "exit"
+  puts "\nWhat would you like to do?\n['status', 'create', 'delete', 'exit']\n\n"
 
   command = gets.chomp 
 
-  case command
-  when "create"
-    droplet_wizard.create
-  when "status"
-    droplet_wizard.status
-  when "delete"
-    droplet_wizard.delete
-  end
+  droplet_wizard.send(command) unless !droplet_wizard.respond_to? command
 end

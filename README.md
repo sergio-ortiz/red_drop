@@ -1,6 +1,6 @@
 # red_drop
 
-is the seed of a grander vision of server automation with ruby.
+Simple cli for automating droplet management with sane defaults baked in.
 
 ## Installation
 
@@ -22,22 +22,21 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-### Todos
-
--   Research: making gem executable
--   Research: TDD and minitest vs rspec
--   Refactor: status module to match delete module droplets var structure
--   Research: converting delete module droplets array to hash with array index as key to avoid accidental deletions
--   Refactor: delete while loop to match that of red_drop.rb
--   Refactor: auth to use Faraday which is used by DropletKit
--   Research: status module to get ip address of runnning droplets
--   Research: having delete module get status before executing
--   Research: using cloud_init to automate server config for SSH, ufw, docker
--   Research: should I use duck typing
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/sergio-ortiz/red_drop.
+
+### Todos
+
+-   Research: TDD whether its w/ minitest or rspec
+-   Refactor: status module to match delete module droplets data structure
+-   Research: converting delete module droplets array to hash to avoid accidental deletions
+-   Refactor: delete module while loop to match that of red_drop.rb
+-   Research: Faraday, used by DropletKit, to replace built-in HTTP client library
+-   Research: status module to get ip address of runnning droplets
+-   Research: delete module to get droplet status before executing
+-   Research: using cloud_init to automate server config for SSH, ufw, docker
+-   Research: implementing duck typing
 
 ## License
 
