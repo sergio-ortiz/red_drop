@@ -1,5 +1,9 @@
-module Delete
-  def delete
+class Delete
+  def initialize(client)
+    @client = client
+  end
+
+  def execute
     puts "loading... \n\n"
 
     droplets = @client.droplets.all.map { |droplet| droplet.to_h }

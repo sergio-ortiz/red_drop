@@ -36,7 +36,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 -   Research: status module to get ip address of runnning droplets
 -   Research: delete module to get droplet status before executing
 -   Research: using cloud_init to automate server config for SSH, ufw, docker
--   Research: implementing duck typing
 
 ## License
 

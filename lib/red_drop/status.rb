@@ -1,5 +1,9 @@
-module Status
-  def status
+class Status
+  def initialize(client)
+    @client = client
+  end
+
+  def execute
     puts "loading... \n\n"
 
     droplets = @client.droplets.all.map { |droplet| { "droplet_id" => droplet.id, "status" => droplet.status } }

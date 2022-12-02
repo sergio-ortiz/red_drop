@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module RedDrop
-  VERSION = "0.2.0"
+class RedDrop
+  VERSION = "0.3.0"
 end

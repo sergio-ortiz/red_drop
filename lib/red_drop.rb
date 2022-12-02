@@ -1,20 +1,29 @@
 require "red_drop/auth"
-auth = Auth.new
-token = auth.token
-
 require 'droplet_kit'
-client = DropletKit::Client.new(access_token: token)
+require "red_drop/create"
+require "red_drop/status"
+require "red_drop/delete"
 
-require "red_drop/droplet_wizard"
+class RedDrop
+  def initialize
+    client = DropletKit::Client.new(access_token: Auth.new.token)
 
-droplet_wizard = DropletWizard.new(client)
+    @task_menu = {
+      "create" => Create.new(client),
+      "status" => Status.new(client),
+      "delete" => Delete.new(client)
+    }
+  end
 
-command = nil
+  def start
+    input = nil
 
-while not command === "exit"
-  puts "\nWhat would you like to do?\n['status', 'create', 'delete', 'exit']\n\n"
+    until input.eql? "exit"
+      puts "\nEnter from task menu below.\n#{@task_menu.keys << "exit"}\n\n"
 
-  command = gets.chomp 
+      input = gets.chomp 
 
-  droplet_wizard.send(command) unless !droplet_wizard.respond_to? command
+      @task_menu[input].execute if @task_menu.has_key? input
+    end
+  end
 end

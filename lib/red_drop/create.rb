@@ -1,5 +1,9 @@
-module Create
-  def create
+class Create
+  def initialize(client)
+    @client = client
+  end
+
+  def execute
     puts "loading... \n\n"
 
     droplet = DropletKit::Droplet.new(name: 'drop', region: 'nyc1', size: 's-1vcpu-512mb-10gb', image: 'ubuntu-22-04-x64')
