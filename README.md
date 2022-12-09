@@ -16,6 +16,8 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ red_drop
 
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9a321408e86f&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
