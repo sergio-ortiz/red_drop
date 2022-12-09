@@ -28,11 +28,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 
 ### Todos
 
--   Research: TDD whether its w/ minitest or rspec
 -   Refactor: status module to match delete module droplets data structure
--   Research: converting delete module droplets array to hash to avoid accidental deletions
 -   Refactor: delete module while loop to match that of red_drop.rb
--   Research: Faraday, used by DropletKit, to replace built-in HTTP client library
+-   Research: TDD whether its w/ minitest or rspec
+-   Research: converting delete module droplets array to hash to avoid accidental deletions
 -   Research: status module to get ip address of runnning droplets
 -   Research: delete module to get droplet status before executing
 -   Research: using cloud_init to automate server config for SSH, ufw, docker
