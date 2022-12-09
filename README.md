@@ -1,6 +1,14 @@
 # red_drop
 
-Simple cli for automating droplet management with sane defaults baked in.
+Simple "interactive" cli for automating digitalocean droplet management with sane defaults baked in for research and development.
+
+Expirementing with the cloud can be expensive and stressful when you have to manually setup and take down Virtual Machines in order to avoid unwanted charges.
+
+Have you ever wonderd "Hmmm... If only there was a simple way to have a linux server in the cloud so that I can fully take advantage of all those free new member credits"?
+
+Most tools are not geared towards automating provisioning for simple research and development on cloud platforms. In fact they can be quite overwhelming with the multitude of different configurations they provide on all their cloud services.
+
+red_drop is an easy to use tool that will take the stress out of provisioning and destroying droplets with reasonable configurations for research and development on digitalocean's cloud.
 
 ## Installation
 
@@ -14,9 +22,17 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
+After installing the gem, simply enter the following command:
+
     $ red_drop
 
+It will then try to look for a valid authentication token. If it can't find one it will prompt you for one. You can find yours or generate one from the API tab on your digitalocean dashboard panel.
+
+In order to use this tool you will need a digitalocean account with a payment method on your account. You can use the referral link below to sign up with $200 of free credit for 60 days to use as your payment method.
+
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9a321408e86f&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
+The referral will also help fund research and developmet on the project.
 
 ## Development
 
