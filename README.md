@@ -51,7 +51,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 -   Research: TDD whether its w/ minitest or rspec
 -   Research: converting delete module droplets array to hash to avoid accidental deletions
 -   Research: status module to get ip address of runnning droplets
--   Research: delete module to get droplet status before executing
+-   Research: delete module to get droplet destroy status for conditional return
+-   Research: status module to get droplet destroy status before displaying droplets
 -   Research: using cloud_init to automate server config for SSH, ufw, docker
 -   research \# frozen_string_literal: true "magic comment"
 
