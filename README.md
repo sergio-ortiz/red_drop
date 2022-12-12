@@ -1,4 +1,4 @@
-# red_drop
+# red_drop:drop_of_blood:
 
 Simple "interactive" cli for automating digitalocean droplet management with sane defaults baked in for research and development.
 
@@ -28,11 +28,11 @@ After installing the gem, simply enter the following command:
 
 It will then try to look for a valid authentication token. If it can't find one it will prompt you for one. You can find yours or generate one from the API tab on your digitalocean dashboard panel.
 
-In order to use this tool you will need a digitalocean account with a payment method on your account. You can use the referral link below to sign up with $200 of free credit for 60 days to use as your payment method.
+In order to use this tool you will need a digitalocean account with a payment method on your account. You can use the referral badge below to sign up with $200 of free credit for 60 days to use as your payment method.
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9a321408e86f&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
-The referral will also help fund research and developmet on the project.
+The referral badge above will also help fund research and developmet on the project.
 
 ## Development
 
