@@ -46,15 +46,18 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 
 ### Todos
 
+-   Research: adding red_drop's RubyGems.org badge to README.md
 -   Refactor: status module to match delete module droplets data structure
 -   Refactor: delete module while loop to match that of red_drop.rb
 -   Research: TDD whether its w/ minitest or rspec
 -   Research: converting delete module droplets array to hash to avoid accidental deletions
 -   Research: status module to get ip address of runnning droplets
+-   Research: authenticating ssh key on DigitalOcean to eventually disable password login
 -   Research: delete module to get droplet destroy status for conditional return
 -   Research: status module to get droplet destroy status before displaying droplets
--   Research: using cloud_init to automate server config for SSH, ufw, docker
--   research \# frozen_string_literal: true "magic comment"
+-   Research: \# frozen_string_literal: true "magic comment"
+-   Research: File system programming in Ruby
+-   Research: replacing droplet_kit wrapper for vanilla Faraday http client library
 
 ## License
 
