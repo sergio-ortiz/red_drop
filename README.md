@@ -1,4 +1,4 @@
-# red_drop:drop_of_blood:
+# red_drop:drop_of_blood: [![Gem Version](https://badge.fury.io/rb/red_drop.svg)](https://badge.fury.io/rb/red_drop)
 
 Simple "interactive" cli for automating digitalocean droplet management with sane defaults baked in for research and development.
 
@@ -46,7 +46,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 
 ### Todos
 
--   Research: adding red_drop's RubyGems.org badge to README.md
 -   Refactor: status module to match delete module droplets data structure
 -   Refactor: delete module while loop to match that of red_drop.rb
 -   Research: TDD whether its w/ minitest or rspec
@@ -58,6 +57,17 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 -   Research: \# frozen_string_literal: true "magic comment"
 -   Research: File system programming in Ruby
 -   Research: replacing droplet_kit wrapper for vanilla Faraday http client library
+-   Feature: cloud-init cloud-config.yaml for user_data in create class request
+
+### Useful Links
+
+[Ruby language reference](https://www.ruby-lang.org/en/)
+
+[Faraday: http client library](https://lostisland.github.io/faraday/)
+
+[DigitalOcean API reference](https://docs.digitalocean.com/reference/api/)
+
+[cloud-init reference](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#ssh)
 
 ## License
 
