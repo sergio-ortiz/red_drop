@@ -1,12 +1,11 @@
 require "red_drop/auth"
-require "droplet_kit"
 require "red_drop/create"
 require "red_drop/status"
 require "red_drop/delete"
 
 class RedDrop
   def initialize
-    client = DropletKit::Client.new(access_token: Auth.new.token)
+    client = Auth.new.token
 
     @task_menu = {
       "create" => Create.new(client),

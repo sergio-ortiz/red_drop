@@ -6,7 +6,7 @@ class Delete
   def execute
     puts "loading... \n"
 
-    droplets = @client.droplets.all.map { |droplet| droplet.to_h }
+    droplets = JSON.parse(@client.get.body)["droplets"]
 
     if droplets.length == 0
       puts "\nThere are no droplets in your DigitalOcean cloud.\n"
@@ -21,16 +21,18 @@ class Delete
 
     until droplets.has_key? option
       puts "\noption: droplet_id\n"
-      droplets.each { |key, droplet| puts "#{key}: #{droplet[:id]}" }
+      droplets.each { |key, droplet| puts "#{key}: #{droplet["id"]}" }
       puts "\nPlease enter an option for a droplet to delete?\n\n"
 
       option = gets.chomp
     end
 
-    response = @client.droplets.delete(id: droplets[option][:id])
+    response = @client.delete(droplets[option]["id"].to_s)
 
-    if response
+    if response.success?
       puts "\ndelete request processed succesfully\n\n"
+    else 
+      puts response.body
     end
   end
 end

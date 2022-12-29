@@ -7,10 +7,13 @@ class Create
     puts "loading... \n\n"
     #user_data = File.read("cloud-config.yaml")
 
-    droplet = DropletKit::Droplet.new(name: 'RedDrop', region: 'nyc1', size: 's-1vcpu-512mb-10gb', image: 'ubuntu-22-04-x64')
-    response = @client.droplets.create(droplet)
+    response = @client.post do |req|
+      req.body = {name: 'RedDrop', region: 'nyc1', size: 's-1vcpu-512mb-10gb', image: 'ubuntu-22-04-x64'}
+    end
+    
+    body = JSON.parse(response.body)
 
-    puts "Your droplet: #{response.id}, is being provisioned.\n"
+    puts "Your droplet: #{body["droplet"]["id"]}, is being provisioned.\n"
   end
 end
 
