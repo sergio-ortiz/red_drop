@@ -51,7 +51,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sergio
 -   Research: delete and status class to filter droplet destroy status before puts droplets
 -   Research: \# frozen_string_literal: true "magic comment"
 -   Research: File system programming in Ruby
--   Research: replacing droplet_kit wrapper for vanilla Faraday http client library
 -   Features: cloud-init cloud-config.yaml for user_data in create class request
 -   Research: including created_at when puts droplets
 

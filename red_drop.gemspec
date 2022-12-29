@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_development_dependency "minitest-reporters", "~> 1.5"
-  spec.add_dependency "droplet_kit", "~> 3.18"
+  spec.add_dependency "faraday", "~> 2.7"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

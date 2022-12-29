@@ -6,7 +6,7 @@ class Status
   def execute
     puts "loading... \n\n"
 
-    droplets = @client.droplets.all.map { |droplet| droplet.to_h }
+    droplets = JSON.parse(@client.get.body)["droplets"]
 
     if droplets.length == 0
       puts "There are no droplets in your DigitalOcean cloud."
@@ -14,15 +14,15 @@ class Status
     end
 
     droplets.each do |droplet|
-      droplet[:networks] = droplet[:networks][:v4].find { |n| n[:type] == "public" } 
+      droplet["networks"] = droplet["networks"]["v4"].find { |n| n["type"] == "public" } 
 
-      if droplet[:networks]
-        droplet[:ip] = "running on #{droplet[:networks][:ip_address]}"
+      if droplet["networks"]
+        droplet["status"] = "running on #{droplet["networks"]["ip_address"]}"
       else
-        droplet[:ip] = "ip not yet assigned, try again in a minute"
+        droplet["status"] = "ip not yet assigned, try again in a minute"
       end
 
-      puts "droplet: #{droplet[:id]} #{droplet[:ip]}"
+      puts "droplet: #{droplet["id"]} #{droplet["status"]}"
     end
   end
 end

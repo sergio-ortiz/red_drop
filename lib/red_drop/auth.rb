@@ -8,10 +8,11 @@ class Auth
     @secret = file.read
     file.close
 
-    @faraday = Faraday.new("https://api.digitalocean.com/v2/droplets")
-    @res = @faraday.get do |req|
-      req.headers["Authorization"] = "Bearer #{@secret}"
-    end
+    @conn = Faraday.new(
+      url: "https://api.digitalocean.com/v2/droplets",
+      headers: {"Authorization" => "Bearer #{@secret}"},
+    )
+    @res = @conn.get
   end
 
   def token
@@ -20,10 +21,9 @@ class Auth
       @secret = gets.chomp
       File.write("secret.txt", @secret)
 
-      @res = @faraday.get do |req|
-        req.headers["Authorization"] = "Bearer #{@secret}"
-      end
+      @conn.headers["Authorization"] = "Bearer #{@secret}"
+      @res = @conn.get
     end
-    @secret
+    @conn
   end
 end
