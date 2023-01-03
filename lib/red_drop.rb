@@ -1,11 +1,11 @@
-require "red_drop/auth"
+require "red_drop/client"
 require "red_drop/create"
 require "red_drop/status"
 require "red_drop/delete"
 
 class RedDrop
   def initialize
-    client = Auth.new.token
+    client = Client.new.auth
 
     @task_menu = {
       "create" => Create.new(client),
