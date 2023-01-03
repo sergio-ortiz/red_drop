@@ -1,6 +1,6 @@
 require "faraday"
 
-class Auth
+class Client
   def initialize
     puts "loading..."
 
@@ -15,7 +15,7 @@ class Auth
     @res = @conn.get
   end
 
-  def token
+  def auth
     while @secret.empty? or not @res.success?
       puts "\nThere in no valid API token in memory,\nplease enter a valid API token."
       @secret = gets.chomp
